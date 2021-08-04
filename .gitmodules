@@ -1,0 +1,6 @@
+[submodule "GRISMCONF"]
+	path = GRISMCONF
+	url = https://github.com/npirzkal/GRISMCONF
+[submodule "GRISM_NIRCAM"]
+	path = GRISM_NIRCAM
+	url = https://github.com/npirzkal/GRISM_NIRCAM
