@@ -1,3 +1,5 @@
+If you use this code, please consider citing the following DOI. [![DOI](https://zenodo.org/badge/392729244.svg)](https://zenodo.org/badge/latestdoi/392729244)
+
 # Spectral_Extraction_Code
 JWST NIRCam WFSS Data Reduction Code
 
