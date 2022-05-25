@@ -1,0 +1,15 @@
+#BSUB -q normal
+#BSUB -J Ar_job[1-96]
+#BSUB -oo F322W2_LSF_Outputs/extraction-%J-%I.o
+#BSUB -eo F322W2_LSF_Outputs/extraction-%J-%I.e
+#BSUB -W 24:00
+#BSUB -n 1
+
+export CONDA_ENVS_PATH=/STEM/scratch.san/zx446701/conda_management/conda_envs
+export PATH=$PATH:/STEM/scratch.san/zx446701/conda_management/miniconda3/bin
+
+echo "Running Extraction"
+source activate extraction_env
+python GRISMV3Sims_OptBox.py $(ls -d F322W2/F322W2_grism/F322W2_Level15_Frames/*.fits | sed -n "${LSB_JOBINDEX}p")
+# echo $(ls -d F322W2/F322W2_grism/F322W2_Level15_Frames/*.fits | sed -n "${LSB_JOBINDEX}p")
+echo "Done"

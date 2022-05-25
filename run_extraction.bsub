@@ -10,7 +10,7 @@ export PATH=$PATH:/STEM/scratch.san/zx446701/conda_management/miniconda3/bin
 
 echo "Running Extraction"
 source activate extraction_env
-python BothGrism2ndOrderMultiPSFSetup.py $(ls -d ver1_F444W_frames/*.fits | sed -n "${LSB_JOBINDEX}p")
+python GRISMV3Sims_OptBox.py $(ls -d ver1_F444W_frames/*.fits | sed -n "${LSB_JOBINDEX}p")
 # echo $(ls -d ver1_F444W_frames/*.fits | sed -n "${LSB_JOBINDEX}p")
 echo "Done"
 
